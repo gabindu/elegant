@@ -3,18 +3,22 @@
 {% for author in article.authors %}
 {% if author|string in AUTHORS %}
 {% if tag.open %}
-    <hr />
+    <!-- <hr /> -->
     {% set tag.open = false %}
     {% set tag.close = true %}
     {% endif %}
     {% set auth = AUTHORS.get(author|string) %}
     <div class="author-blurb">
+        {% if AUTHORS.get(author|string).url %}
         <a href="{{ auth.url }}" target="_blank" rel="nofollow noopener noreferrer">
+	{% endif %}
             {% if AUTHORS.get(author|string).avatar %}
             <img src={{ auth.avatar }} alt="{{ author }} Avatar" title="{{ author }}">
             {% endif %}
             <span class="author-name">{{ author }}</span>
+        {% if AUTHORS.get(author|string).url %}
         </a>
+	{% endif %}
         {{ auth.blurb }}
     </div>
     {% endif %}
