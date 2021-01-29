@@ -1,0 +1,105 @@
+
+.article-content div h1,h2,h3,h4,h5 {
+    text-align: left;
+}
+
+.list-of-tags, .tag-title, a.category-title-inside-accordion, h1, h2, h3, h4, h5, h6, ul.list-articles-under-tag-category li time {
+    font-family: var(--serifFontFamily);
+}
+
+
+
+/*
+ * Fixing the Table of Content shown on the left to the page,
+ * independent of how far down the user has scrolled in the article.
+ * (only when the screen size is larger than the default "phone" size
+ * defined in the main css file)
+ *
+ */
+
+@media (min-width: 768px) {
+
+
+.table-of-content nav {
+    position: fixed;
+    width: 12%;
+}
+       
+}
+
+
+
+
+
+
+/*
+ * Responsive design style sheet for pelican YouTube integration.
+ * Makes the video as wide as possible, keeping a specified aspect ratio
+ * of the video (e.g. 4:3, 16:9, etc. for width vs height).  The video
+ * will resize and shrink as you resize the browser window.  Enjoy!
+ *
+ * Integrate these definitions into your project style sheet, and use as
+ *
+ * <div class="youtube youtube-16x9">
+ *     <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen seamless frameborder="0"></iframe>
+ * </div>
+ *
+ * (c) 2015 Peter Bittner <django@bittner.it>, license: MIT
+ */
+
+.youtube-4x3 {
+	padding-bottom: 75%;  /* inverse of 4:3 aspect ratio */
+}
+.youtube-16x9 {
+	padding-bottom: 56.25%;  /* inverse of 16:9 aspect ratio */
+}
+
+.youtube,
+.youtube-4x3,
+.youtube-16x9 {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+}
+
+
+.youtube iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	border: 0;
+}
+
+
+
+.youtube-4x3 iframe,
+.youtube-16x9 iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 2px;
+	border: 0;
+}
+
+
+/* display keyboard keys, like ctrl, alt, etc. */
+.article-content kbd {
+    display: inline-block;
+    margin: 0 .1em;
+    padding: .1em .6em;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #444444;
+    text-shadow: 0 1px 0 #FFFFFF;
+    background-color: #DDDDDD;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px #EEEEEE, inset 0 1px 0 0 #fff;
+    overflow-wrap: break-word;
+}
+
