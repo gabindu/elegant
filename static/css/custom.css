@@ -12,6 +12,17 @@
 }
 
 
+/*
+ *  Fix for bad overscroll behaviour on Chrome
+ * see https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/
+ * or
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior
+ */
+
+html {
+  overscroll-behavior: none;
+}
+
 
 /*
  * Fixing the Table of Content shown on the left to the page,
