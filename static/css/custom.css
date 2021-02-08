@@ -1,3 +1,8 @@
+/* --- IMPORTANT: ---
+ * need to pre/post-process css via gulp,
+ * see: https://elegant.oncrashreboot.com/use-postcss-to-compile-css-style-sheets
+ */
+
 :root {
   --serifHeadingFontFamily: Baskerville, "PT Serif Caption", Garamond, Georgia, "DejaVu Serif", "Times New Roman", Times, serif;
 }
@@ -60,6 +65,29 @@ html {
     list-style-type: square;
     padding-left: 0.6rem;
 }
+
+
+/* Changing color of applause button */
+
+div.applause_button {
+  /* line-height: 50px; */
+  /* height: 50px; */
+    display: block;
+    color: green;
+  & applause-button {
+    height: 50px;
+    width: 50px;
+    & div.style-root {
+      /* We are forced to use important because applause-button has defined
+       * style on the element */
+      fill: green !important;
+      stroke: green !important;
+      color: green !important;
+    }
+  }
+}
+
+
 
 /*
  * Responsive design style sheet for pelican YouTube integration.
