@@ -139,8 +139,8 @@
                 {% endfor %}
             </ul>
             {% endif %}
-            {% from '_includes/applause_button.html' import applause_button with context %}
-            {{ applause_button(article) }}
+            <h4>Feedback</h4>
+            Please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdKkd8RqoDPjV81_ZWnjZdcUpi1kICZrCFwIP8mw8809vZweg/viewform?usp=pp_url&entry.95532957={{ SITEURL }}/{{ article.url }}">click here</a> if you find a mistake or broken link/video, or if you have any other suggestions to improve this page!
             {% from '_includes/share_links.html' import share_links with context %}
             {{ share_links(article) }}
             {% include '_includes/social_links.html' %}
