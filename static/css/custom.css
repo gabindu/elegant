@@ -160,3 +160,5 @@ div.applause_button {
     overflow-wrap: break-word;
 }
 
+/* attempt at fixing extra margins in lists */
+ul p { margin-bottom: 0; }
