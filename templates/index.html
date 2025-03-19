@@ -90,6 +90,7 @@
     {% endif %}
     {% from '_includes/_defaults.html' import RECENT_ARTICLES_COUNT, ARCHIVES_URL, CATEGORIES_URL with context %}
     <div class="row-fluid">
+        {% if RECENT_ARTICLES_COUNT >= 0 %}
         <div class="{{ css_class }}">
             <header>
             <h1 id="recent-posts">Recent Posts <a id="allposts" href="{{ SITEURL }}/{{ ARCHIVES_URL }}">all posts</a></h1>
@@ -118,6 +119,7 @@
             {% endif %}
             {% endfor %}
         </div>
+        {% endif %}
         </div>
     </div>
     {% endif %}
